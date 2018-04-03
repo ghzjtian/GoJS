@@ -6,7 +6,7 @@
     <meta name="description" content="A family tree diagram of British royalty."/>
     <!-- Copyright 1998-2018 by Northwoods Software Corporation. -->
     <meta charset="UTF-8">
-    <script src="../release/go_break.js"></script>
+    <script src="../release/go-debug.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
     <!-- 显示例子的左边栏和下面的 detail 显示 -->
     <!--<script src="../assets/js/goSamples.js"></script>  &lt;!&ndash; this is only for the GoJS Samples framework &ndash;&gt;-->
@@ -14,7 +14,7 @@
         function init() {
             if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
             var $ = go.GraphObject.make;  // for conciseness in defining templates
-            go.licenseKey = "sdfsdf";
+
             myDiagram =
                 $(go.Diagram, "myDiagramDiv",  // must be the ID or reference to div
                     {
@@ -50,6 +50,8 @@
                     )  // end row 2
                 ));
 
+
+            //取得需要显示的提示语句
             // get tooltip text from the object's data
             function tooltipTextConverter(person) {
                 var str = "";
@@ -73,6 +75,7 @@
                         new go.Binding("text", "", tooltipTextConverter))
                 );
 
+            //根据性别，获得所在的颜色.
             // define Converters to be used for Bindings
             function genderBrushConverter(gender) {
                 if (gender === "M") return bluegrad;
@@ -83,6 +86,7 @@
             // replace the default Node template in the nodeTemplateMap
             myDiagram.nodeTemplate =
                 $(go.Node, "Auto",
+                    //可否删除?, 是否有提示语句
                     {deletable: false, toolTip: tooltiptemplate},
                     new go.Binding("text", "name"),
                     $(go.Shape, "Rectangle",
@@ -105,6 +109,7 @@
             // define the Link template
             myDiagram.linkTemplate =
                 $(go.Link,  // the whole link panel
+                    //直角的角度，是否可以选择 link line
                     {routing: go.Link.Orthogonal, corner: 5, selectable: false},
                     $(go.Shape, {strokeWidth: 3, stroke: '#424242'}));  // the gray link shape
 

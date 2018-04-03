@@ -1,6 +1,6 @@
-Family Tree 源码解读.
+# Family Tree 源码解读.
 
-
+* 1.后台的人员的增删查改，可以参考 [OrgChart Editor](https://gojs.net/latest/samples/orgChartEditor.html) 去实现.该例子可以随意地增，删人员，拖动人员的直系的联络人.
 
 
 

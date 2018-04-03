@@ -23,7 +23,7 @@
     // define a simple Node template
     myDiagram.nodeTemplate =
       $(go.Node, "Vertical",  // the Shape will go around the TextBlock
-          {background: "#44ccff"},
+
         $(go.Shape, "RoundedRectangle", { strokeWidth: 2},
           // Shape.fill is bound to Node.data.color
           new go.Binding("fill", "color")),
