@@ -63,10 +63,12 @@
 
     function scalefunc(diagram, scale) {
       var oldscale = diagram.scale;
+      console.log("current scale:"+scale);
+      // print("current scale:"+scale);
       if (scale > oldscale) {
-        return oldscale + 0.25;
+        return oldscale + 0.15;
       } else if (scale < oldscale) {
-        return oldscale - 0.25;
+        return oldscale - 0.15;
       }
       return oldscale;
     }

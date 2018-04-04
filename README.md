@@ -1,9 +1,14 @@
 # Family Tree 源码解读.
 
 * 1.后台的人员的增删查改，可以参考 [OrgChart Editor](https://gojs.net/latest/samples/orgChartEditor.html) 去实现.该例子可以随意地增，删人员，拖动人员的直系的联络人.
-
-
-
+* 2.选择后的 node 效果的改变.(/intro/selection.html)
+* 3.未显示的数据的折叠.(/intro/subtrees.html)
+* 4.数据的集合.(intro/collections.html)
+* 5.Diagram 中事件的监听(intro/events.html)
+* 6.权限的控制,点击/滚动 等等的权限. (/intro/permissions.html)
+* 7.滚动的测试.(samples/scrollModes.html)(zoom 默认为： 100 - 0.1 ,暂时还不知道适合的 zoom 值为多少. )
+* 8.数据绑定的操作.(intro/dataBinding.html)
+* 9.从 JSON 中读取数据并显示到 graph
 
 ***
 ***
